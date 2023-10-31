@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Search App</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png">
+    <link rel="icon" type="image/jpg" href="img/favicon_io/favicon.ico"/>
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Josefin+Slab:wght@300&family=Saira:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+    <body>
+
+        <!-- NAV BAR -->
+
+        <nav class="nav-pokemon">
+            <ul>
+                <li><a href="https://www.pokemon.com/uk">Pokémon Official Site</a></li>
+                <li><a href="https://www.hackaboss.com/">Learn how to code >></a></li>
+            </ul>
+        </nav>
+
+
+        <!-- HEADER POKEMON -->
+
+        <header class="header">
+            <a href="index.html">
+                <img src="img/pokemon-logo.png" alt="Logo Pokedex">
+            </a>
+         </header>
+
+
+        <!-- CONTAINER SEARCH BARN AND POKEMON CARD -->
+
+        <container>
+            <section class="searcher">
+                <!-- TITLE -->
+                <h1 class="playful" for="pokemonName">
+                    <span aria-hidden="true">L</span><span aria-hidden="true">o</span><span aria-hidden="true">o</span><span aria-hidden="true">k</span><span aria-hidden="true"> </span><span aria-hidden="true">f</span><span aria-hidden="true">o</span><span aria-hidden="true">r</span><span aria-hidden="true"> </span><span
+                    aria-hidden="true">a</span><span
+                    aria-hidden="true"> </span><span aria-hidden="true">P</span><span aria-hidden="true">o</span><span aria-hidden="true">k</span><span aria-hidden="true">e</span><span aria-hidden="true">m</span><span aria-hidden="true">o</span><span aria-hidden="true">n</span>
+                  </h1>
+
+                <!-- <label for="pokemonName">Nombre del Pokémon:</label> -->
+                <!-- SEARCH BAR -->
+
+                <div class="searchcontainer">
+                    <!-- <input type="text" id="pokemonName" placeholder="Type here the name..." class="searchbarstyle">
+                    <button class="searchbuttonstyle" onclick="getPokemonData()"> Search </button> -->
+                </div>
+
+                <!-- with imput -->
+                <form action="" onsubmit="searchPokemon(event)">
+                    <input type="text" name="pokemon" autocomplete="off" placeholder="Type here the name...">
+                    <button class="searchbuttonstyle" onclick="searchPokemon()"> Search </button>
+                </form>
+            </section>
+
+            <!-- POKEMON CARD -->
+
+            <section class="pokemonCard">
+                <!-- <div class="pokemonInfo" id="pokemonInfo">
+                    <div class="pokemonImage">
+                        <img id="frontImage" src="" alt="Front Image">
+                        <img id="backImage" src="" alt="Back Image">
+                    </div>
+                    <h2 id="name"></h2>
+                    <p>Altura (mts): <span id="height"></span></p>
+                    <p>Peso (kg): <span id="weight"></span></p>
+                    <p>Puntos de Vida: <span id="hp"></span></p>
+                    <p>Ataque: <span id="attack"></span></p>
+                    <p>Defensa: <span id="defense"></span></p>
+                    <p>Velocidad: <span id="speed"></span></p>
+                    <p>Tipo: <span id="type"></span></p>
+                </div> -->
+                <div data-pokemon-card class="pokeCard">
+                    <div data-pokemon-name> </div>
+                    <div data-pokemon-img-container class="imgContainer">
+                        <img data-pokemon-img class="pokeImg" src="img/pokemon-img-01.png" alt="Pokemon Image">
+                    </div>
+                    <div data-pokemon-id></div>
+                    <div data-pokemon-types class="pokemonTypes"></div>
+                    <div data-pokemon-stats class="pokemonStats"></div>
+                </div>
+            </section>
+        </container>
+
+        <!-- AUDIO -->
+          <!-- 
+        <audio autoplay loop hidden>  
+            <source src="/assets/Music-Pokemon.mp3" type="audio/mp3">
+        </audio>
+        -->
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            Made in Vigo - Canarias - Valencia - Londres
+        </footer>
+
+
+
+
+        <!-- NOTAS -->
+
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="assets/js/main.js"></script>
+      
+</body>
+</html>
