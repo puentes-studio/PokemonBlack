@@ -5,6 +5,7 @@ const pokeImgContainer = document.querySelector('[data-pokemon-img-container]');
 const pokeId = document.querySelector('[data-pokemon-id]');
 const pokeTypes = document.querySelector('[data-pokemon-types]');
 const pokeStats = document.querySelector('[data-pokemon-stats]');
+const pokeHeight = document.querySelector('[data-pokemon-heigth]')
 
 const typeColors = {
     electric: '#FFEA70',
@@ -38,14 +39,23 @@ const searchPokemon = event => {
 
 const renderPokemonData = data => {
     const sprite =  data.sprites.front_default;
-    const { stats, types } = data;
+    const { stats, types, name, height } = data;
+    const heightTextElement = document.createElement("div");
+    heightTextElement.classList.add("pokemonStats");
+    console.log(heightTextElement);
 
-    pokeName.textContent = data.name;
+    pokeName.textContent = name;
+    pokeHeight.textContent = height;
     pokeImg.setAttribute('src', sprite);
     pokeId.textContent = `Nº ${data.id}`;
     setCardColor(types);
+    // pokeHeight.innerHTML = '';
+    heightTextElement.textContent = `height ${height / 10} m`;
+    pokeCard.appendChild(heightTextElement)
     renderPokemonTypes(types);
     renderPokemonStats(stats);
+   
+    
 }
 
 
@@ -88,6 +98,7 @@ const renderNotFound = () => {
     pokeTypes.innerHTML = '';
     pokeStats.innerHTML = '';
     pokeId.textContent = '';
+    pokeHeight.textContent = '';
 }
 
 
