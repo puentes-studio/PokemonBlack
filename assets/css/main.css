@@ -159,17 +159,67 @@ input {
     box-shadow: 5px 5px 7px rgb(255, 251, 2);
 }
 
+.dropdown-content {
+    max-height: 100px;
+    overflow-y: auto;
+    margin: 0;
+    max-width: 80%;
+    margin-top: -6px;
+    margin-left: -22px;
+    scrollbar-width: thin; 
+    scrollbar-color: #fbff00 #242424;
+}
+
+/* Styles for WebKit browsers (Chrome, Safari) */
+.dropdown-content::-webkit-scrollbar {
+    width: 20px; /* Set the width of the scrollbar */
+}
+
+.dropdown-content::-webkit-scrollbar-thumb {
+    background-color: #fbff00; /* Color of the scrollbar thumb */
+}
+
+.dropdown-content::-webkit-scrollbar-track {
+    background-color: #242424; /* Color of the scrollbar track */
+}
+
+.dropdown-content li {
+    list-style: none;
+    text-align: center;
+    padding: 0.2rem;
+    color: white;
+    background-color: rgb(9, 9, 9);
+}
+
+.dropdown-content li:hover {
+    color: #cd0000;
+    background-color: rgb(195, 195, 195);
+
+}
+
+.suggestions-list li {
+    cursor: pointer;
+  }
+  
+  .suggestions-list li:hover {
+    cursor: pointer;
+    text-decoration: underline; 
+  }
+
 .pokemonCard {
     display: flex;
     justify-content: center;
-    padding-top: 1.5rem;
+}
+
+#name{
+    font-size: 23px;
 }
 
 .pokeCard {
     position: relative;
     height: fit-content;
+    width: 215px;
     font-family: 'Josefin Slab', serif;
-    max-width: 300px;
     border:rgb(0, 239, 96) solid 5px;
     border-radius: 4px;
     color: #353535;
@@ -191,25 +241,58 @@ input {
     z-index: -1;
 
 }
-.imgContainer {
-    position: relative;
-    width: 280px;
-    margin: 10px auto;
+
+.pokemonCardContainer {
+    opacity: 0;
+    height: 120px;
 }
-.pokemonStats div {
+
+
+.pokemonImage {
+    display: flex;
+}
+
+.sprite-img {
+    position: relative;
+    height: 130px;
+}
+
+.sprite-img img {
+    transition: opacity 300ms;
+}
+
+.sprite-container {
+    position: absolute;
     display: flex;
     justify-content: space-between;
-    align-content: space-between;
-    font: 15px;
 }
-.pokemonTypes div{
-    padding: 3px;
-    margin: 5px;
-    border-radius: 4px;
-    border: 1px dashed black
+
+/* .sprite-shiny {
+    position: absolute;
+} */
+
+.sprite-shiny img {
+    opacity: 0;
 }
-.pokeImg {
-    height: 130px;
+
+.img-back-shiny:hover {
+    opacity: 1;
+}
+
+.pokemonStats {
+    display: flex;
+    justify-content: space-between;
+    margin: 3.5px;
+}
+
+
+
+.error-busqueda {
+    opacity: 0;
+    color: red;
+    margin-top: 20px;
+    display: block;
+    transition: opacity 150ms;
 }
 
 /* .pokemonInfo {

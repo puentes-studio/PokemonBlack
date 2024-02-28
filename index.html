@@ -54,28 +54,48 @@
 
                 <!-- with imput -->
                 <form action="" onsubmit="searchPokemon(event)">
-                    <input type="text" name="pokemon" autocomplete="off" placeholder="Type here the name...">
-                    <button class="searchbuttonstyle" onclick="searchPokemon()"> Search </button>
+                    <input type="text" id="pokemon-name" autocomplete="off" placeholder="Type here the name..." onkeydown="hideErrorMsg()">
+                    <button class="searchbuttonstyle" id="search-button" onclick="searchPokemon()"> Search </button>
+                    <ul id="suggestions" class="dropdown-content" style="display: none;"></ul>
                 </form>
             </section>
 
             <!-- POKEMON CARD -->
 
-            <section class="pokemonCard">
-                <!-- <div class="pokemonInfo" id="pokemonInfo">
-                    <div class="pokemonImage">
-                        <img id="frontImage" src="" alt="Front Image">
-                        <img id="backImage" src="" alt="Back Image">
-                    </div>
+            <section id="pokemon-info" class="pokemonCard">
+                <span id="no-pokemon" class="error-busqueda"><strong>No se encontró ningún pokemon con ese
+                    nombre</strong></span>
+                <div id="pokemon-img" class="pokeCard">
                     <h2 id="name"></h2>
-                    <p>Altura (mts): <span id="height"></span></p>
-                    <p>Peso (kg): <span id="weight"></span></p>
-                    <p>Puntos de Vida: <span id="hp"></span></p>
-                    <p>Ataque: <span id="attack"></span></p>
-                    <p>Defensa: <span id="defense"></span></p>
-                    <p>Velocidad: <span id="speed"></span></p>
-                    <p>Tipo: <span id="type"></span></p>
-                </div> -->
+                    <div class="pokemonImage">
+                        <div class="sprite-img">
+                            <div class="sprite-container">
+                                <img id="front-image" alt="Front Image" class="img-front" onmouseenter="showShiny()"
+                                    onmouseleave="hideShiny()">
+                                <img id="back-image" alt="Back Image" class="img-back">
+                            </div>
+                            <div class="sprite-container sprite-shiny">
+                                <img id="front-image-shiny" alt="Front Image" class="img-front-shiny"
+                                    onmouseenter="showShiny()" onmouseleave="hideShiny()">
+                                <img id="back-image-shiny" alt="Back Image" class="img-back-shiny">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="pokemonStats"><strong>Tipo:</strong> <span id="type"></span></p>
+                    <p class="pokemonStats"><strong>Peso:</strong> <span id="weight"></span></p>
+                    <p class="pokemonStats"><strong>Altura:</strong> <span id="height"></span></p>
+                    <p class="pokemonStats"><strong>PS:</strong> <span id="hp"></span></p>
+                    <p class="pokemonStats"><strong>Ataque:</strong> <span id="attack"></span></p>
+                    <p class="pokemonStats"><strong>Defensa:</strong> <span id="defense"></span></p>
+                    <p class="pokemonStats"><strong>Ataque Especial:</strong> <span id="special-attack"></span></p>
+                    <p class="pokemonStats"><strong>Defensa Especial:</strong> <span id="special-defense"></span></p>
+                    <p class="pokemonStats"><strong>Velocidad:</strong> <span id="speed"></span></p>
+                </div>
+            </section>
+
+            <!-- <section class="pokemonCard">
+               
                 <div data-pokemon-card class="pokeCard">
                     <div data-pokemon-name> </div>
                     <div data-pokemon-img-container class="imgContainer">
@@ -86,7 +106,7 @@
                     <div data-pokemon-types class="pokemonTypes"></div>
                     <div data-pokemon-stats class="pokemonStats"></div>
                 </div>
-            </section>
+            </section> -->
         </container>
 
        <!-- Audio -->
