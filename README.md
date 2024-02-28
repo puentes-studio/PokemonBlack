@@ -1,8 +1,8 @@
-Title: Pokedex
+Title: Pokedex Dark Version
 
 Description:
 
-Welcome to the Pokedex, a web application that brings the world of Pokemon to life through HTML, CSS, and JavaScript! Our team has crafted an immersive interface where users can dive into the Pokemon universe, explore various species, and discover their unique characteristics.
+Welcome to the Black Version of the Pokedex, a web application that brings the world of Pokemon to life through HTML, CSS, and JavaScript! I crafted an immersive darked version of the interface where users can dive into the Pokemon universe, explore various species, and discover their unique characteristics.
 
 Key Features:
 
