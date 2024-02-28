@@ -1,6 +1,8 @@
 const pokemonNameInput = document.getElementById("pokemon-name");
 const suggestionsList = document.getElementById("suggestions");
-const pokemonCardContainer = document.getElementById("pokemon-img");
+const pokemonCardContainer = document.querySelector(".pokemonCard");
+
+// const pokemonCardContainer = document.getElementById("pokemon-info");
 const pokemonNameContent = document.getElementById("name");
 const pokemonImgSrcFront = document.getElementById("front-image");
 const pokemonImgSrcBack = document.getElementById("back-image");
@@ -62,21 +64,30 @@ function removePokemonInfo() {
   pokemonImgSrcBackShiny.src = "";
 }
 
-function showShiny() {
-  pokemonImgSrcFrontShiny.style.opacity = 1;
-}
 
-function hideShiny() {
-  pokemonImgSrcFrontShiny.style.opacity = 0;
-}
+
+function hideStats() {
+    statsTextElements.forEach((element) => {
+      element.style.display = 'none';
+    });
+  }
 
 function hideCardContainer() {
-  pokemonCardContainer.style.opacity = 0;
-}
+    pokemonCardContainer.style.display = 'none';
+  }
+  
+  function showCardContainer() {
+    pokemonCardContainer.style.display = 'block';
+  }
 
-function showCardContainer() {
-  pokemonCardContainer.style.opacity = 1;
-}
+  function showShiny() {
+    pokemonImgSrcFrontShiny.style.opacity = 1;
+  }
+  
+  function hideShiny() {
+    pokemonImgSrcFrontShiny.style.opacity = 0;
+  }
+
 
 function showErrorMsg() {
   errorSpan.style.opacity = 1;
@@ -109,11 +120,7 @@ function handleErrorApi(error) {
   errorSpan.textContent = "Pokemon not found, please try again.";
 }
 
-function hideStats() {
-  statsTextElements.forEach((element) => {
-    element.style.display = 'none';
-  });
-}
+
 
 
 

@@ -109,11 +109,6 @@ section {
     align-items: center;
 }
 
-/* label {
-    padding-top: 3rem;
-    font-size: 2rem;
-}  */
-
 .searchcontainer{
     margin-top: -2rem;
     display: flex;
@@ -121,18 +116,7 @@ section {
     justify-content: center;
     padding-top: 1rem;
 }  
-/* 
-.searchbarstyle{
-    min-width: 60vh;
-    height: 40px;
-    border: none;
-    background-color: rgb(4, 4, 4);
-    color: #fcd304;
-    border-radius: 40px;
-    font-family: 'Comfortaa', sans-serif;
-    text-align: center;
-    box-shadow: 10px 10px 7px rgb(210, 210, 210);
-} */
+
 .searchbuttonstyle {
     background-color: rgb(26, 250, 67);
     color: #000000;
@@ -206,13 +190,15 @@ input {
     text-decoration: underline; 
   }
 
-.pokemonCard {
-    display: flex;
+  .pokemonCard {
+    display: none; /* Initially hide the card */
     justify-content: center;
 }
 
+
 #name{
     font-size: 23px;
+    margin: 10px;
 }
 
 .pokeCard {
@@ -225,8 +211,8 @@ input {
     color: #353535;
     text-align: center;
     padding: 10px;
-    margin-bottom: 2rem;
-    background-color: rgb(255, 255, 255);
+    margin: -25px auto;
+    background-color: rgb(242 242 242);
 }
 .pokeCard:before {
     content: '';
@@ -242,14 +228,12 @@ input {
 
 }
 
-.pokemonCardContainer {
-    opacity: 0;
-    height: 120px;
-}
-
 
 .pokemonImage {
     display: flex;
+    margin-top: -15px;
+    margin-bottom: -25px;
+    margin-left: 10px;
 }
 
 .sprite-img {
@@ -267,9 +251,6 @@ input {
     justify-content: space-between;
 }
 
-/* .sprite-shiny {
-    position: absolute;
-} */
 
 .sprite-shiny img {
     opacity: 0;
@@ -294,18 +275,6 @@ input {
     display: block;
     transition: opacity 150ms;
 }
-
-/* .pokemonInfo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-    border-radius: 8px;
-    padding: 3.4rem;
-}
-section.pokemonCard p {
-    margin-block: 0;
-} */
 
 
 footer {
@@ -347,22 +316,9 @@ footer {
         min-width: 35vh;
     }
 
-    label {
-        display: flex;
-        justify-content: center;
-        justify-content: center;
-        font-size: 3rem;
-        text-align: center;
-    }
+ 
 
-    .pokemonCard {
-        padding-top: 2rem;
-    }
-
-    .pokemonInfo {
-        font-size: 0.8em;
-        padding: 2rem;
-    }
+  
 
 
 
